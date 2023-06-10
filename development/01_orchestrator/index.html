@@ -525,6 +525,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#103" class="md-nav__link">
     1.0.3
   </a>
@@ -1253,6 +1260,15 @@
 </ul>
 <hr />
 <h2 id="release-notes">Release Notes</h2>
+<h3 id="104">1.0.4</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ADDED <img alt="🪲" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1fab2.svg" title=":beetle:" /> Check if the environment variable <code>HOST_DIR</code> is empty.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ADDED <img alt="🛠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e0.svg" title=":tools:" /> Added a <em>clean on failure</em> when a server creation is triggered.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ADDED <img alt="🛠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e0.svg" title=":tools:" /> Added an API flag <code>noclean</code> to disable <em>clean on failure</em>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BUGFIX <img alt="🪲" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1fab2.svg" title=":beetle:" /> Fixed issue where failures on <code>docker compose</code> commands did not get handled by API correctly.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BUGFIX <img alt="🪲" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1fab2.svg" title=":beetle:" /> Fixed an issue where generic failure was being reported back via API when plans were being generated.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> LOGGING <img alt="💬" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4ac.svg" title=":speech_balloon:" /> Added additional step logging for <em>debug</em> logging to assist in fault finding.</li>
+</ul>
 <h3 id="103">1.0.3</h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BUGFIX <img alt="🪲" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1fab2.svg" title=":beetle:" /> Updated API for use with Discord bot.</li>
