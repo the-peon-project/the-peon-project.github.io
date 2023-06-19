@@ -539,6 +539,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    1.2.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    1.2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#110" class="md-nav__link">
     1.1.0
   </a>
@@ -881,6 +895,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../games/ark/" class="md-nav__link">
+        Ark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../games/assetto_corsa_competizione/" class="md-nav__link">
         Assetto Corsa Competizione
       </a>
@@ -1106,6 +1134,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/games/ark/" class="md-nav__link">
+        Ark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/games/assetto_corsa_competizione/" class="md-nav__link">
         Assetto Corsa Competizione
       </a>
@@ -1257,17 +1299,19 @@
 <hr />
 <h2 id="roadmap">Roadmap</h2>
 <p>Here are some planned features</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security - Add <code>fail2ban</code> to REST API</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security - Users &amp; Audit Logging</li>
+</ul>
 <h3 id="11x"><em>1.1.x</em></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RESTapi (v1) - Console</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security - Users &amp; Audit Loggin</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Backups</li>
 </ul>
 <h3 id="10x">1.0.x</h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /> RELEASE <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Update to new deployment architecture.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Security - Add <code>fail2ban</code> to REST API</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /> RELEASE <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Update to new deployment architecture.</li>
 </ul>
 <h3 id="03x"><em>0.3.x</em></h3>
 <ul class="task-list">
@@ -1288,8 +1332,19 @@
 </ul>
 <hr />
 <h2 id="release-notes">Release Notes</h2>
+<h3 id="121">1.2.1</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ADDED <img alt="🆕" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f195.svg" title=":new:" /> Added <code>skip</code> flag to <code>Server PUT</code> to force bypass of actions (if required)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BUGFIX <img alt="🪲" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1fab2.svg" title=":beetle:" /> Added return on succeful create when not start is requested.</li>
+</ul>
+<h3 id="120">1.2.0</h3>
 <p><strong><img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /> IMPACT RELEASE <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /></strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CHANGED <img alt="🛠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e0.svg" title=":tools:" /> Changed URL path from <code>/api/1.0</code> to <code>/api/v1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CHANGED <img alt="🛠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e0.svg" title=":tools:" /> Added sort to <code>get_plans</code></li>
+</ul>
 <h3 id="110">1.1.0</h3>
+<p><strong><img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /> IMPACT RELEASE <img alt="⚡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a1.svg" title=":zap:" /></strong></p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CHANGED <img alt="🛠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e0.svg" title=":tools:" /> Moved logging into container logs</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ADDED <img alt="🆕" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f195.svg" title=":new:" /> Added <code>DEV_MODE</code> flag to enable/disable logging/dev mode.</li>
