@@ -744,8 +744,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-working-directory" class="md-nav__link">
-    1. Working directory
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-Requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-download-base-deployment" class="md-nav__link">
+    1. Download base deployment
   </a>
   
 </li>
@@ -757,29 +764,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3-extract-the-project" class="md-nav__link">
-    3. Extract the project
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-deploy-peon-to-the-server" class="md-nav__link">
-    4. Deploy Peon to the server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-run-peon-cli-to-confirm-health-optional" class="md-nav__link">
-    5. Run peon-cli to confirm health (optional)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peon-usage" class="md-nav__link">
+    PEON Usage
+  </a>
   
 </li>
       
@@ -1010,28 +1003,26 @@
 <p>Welcome to the guides for the PEON project.</p>
 <p>Here you will learn how to get up and running as fast as possible.</p>
 <h2 id="peon-deployment">PEON Deployment</h2>
-<blockquote>
-<p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> This guide is outdated and incorrect... We're getting there.</p>
-</blockquote>
-<h3 id="1-working-directory">1. Working directory</h3>
-<p>Create a working directory for the project</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>/root/peon
+<h3 id="pre-requisites">Pre-Requisites</h3>
+<p>The following packages should be installed for PEON to run.</p>
+<div class="highlight"><pre><span></span><code>- git
+- Docker
+- Docker Compose
+</code></pre></div>
+<h3 id="1-download-base-deployment">1. Download base deployment</h3>
+<p>After navigating to your desired directory, you can pull the latest project release. <em>The folder <code>peon</code> will automatically be created</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/the-peon-project/peon
 </code></pre></div>
 <h3 id="2-download-the-latest-release">2. Download the latest release</h3>
-<p>Pull the latest release from the peon repo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>https://github.com/the-peon-project/peon/archive/refs/tags/warcamp.tar.gz
+<blockquote>
+<p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> If you want to deploy a Discord bot, you need to first create a <code>DISCORD TOKEN</code>. You can follow the steps at <a href="https://realpython.com/how-to-make-a-discord-bot-python/#how-to-make-a-discord-bot-in-the-developer-portal">this link</a></p>
+</blockquote>
+<p>You can now deploy PEON with the following.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>peon
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./deploy_peon.sh
 </code></pre></div>
-<h3 id="3-extract-the-project">3. Extract the project</h3>
-<p>Extract the project files into the <code>peon</code> directory.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tar<span class="w"> </span>-xvf<span class="w"> </span>warcamp.tar.gz<span class="w"> </span>--strip-components<span class="o">=</span><span class="m">1</span><span class="w"> </span>--directory<span class="w"> </span>peon<span class="w"> </span>-C<span class="w"> </span>/root/peon/.
-</code></pre></div>
-<h3 id="4-deploy-peon-to-the-server">4. Deploy Peon to the server</h3>
-<p>Run download/deploy containers and configure services.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./install_peon.sh
-</code></pre></div>
-<h3 id="5-run-peon-cli-to-confirm-health-optional">5. Run <code>peon-cli</code> to confirm health (optional)</h3>
-<p>Management tui which runs on the docker host and is used to streamline peon support.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>peon
+<h2 id="peon-usage">PEON Usage</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>peon
 </code></pre></div>
 
 
