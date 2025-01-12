@@ -1067,6 +1067,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duration-timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duration timers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-datetime-timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      End date/time timers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="End date/time timers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#date-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date-time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1454,11 +1517,6 @@
 <td>to schedule a date and time when a warcamp must start/stop.</td>
 </tr>
 <tr>
-<td><img alt="🕒" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f552.svg" title=":clock3:" /></td>
-<td><code>!extend</code></td>
-<td>to keep a warcamp alive for [x] more hours.</td>
-</tr>
-<tr>
 <td><img alt="🔧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f527.svg" title=":wrench:" /></td>
 <td><code>!register</code></td>
 <td>to register a warparty.</td>
@@ -1472,6 +1530,86 @@
 <td><img alt="❔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2754.svg" title=":grey_question:" /></td>
 <td><code>!usage</code></td>
 <td>to print this help menu.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timers">Timers</h3>
+<p>There are several options regarding scheduling the peon to carry out an <code>action</code>.</p>
+<blockquote>
+<p>Appylying any timer will overwrite the previous timer (no extending sessions)<br />
+Issue a server <em>get</em> to check if and what the current stop time is configured for.</p>
+</blockquote>
+<h4 id="duration-timers">Duration timers</h4>
+<p>If you wish to configure an <code>action</code> to occur after a specific <strong>duration</strong> of time has elapsed.</p>
+<table>
+<thead>
+<tr>
+<th>syntax</th>
+<th>example</th>
+<th>example behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#</code>m or <code>#</code></td>
+<td><code>!stop 15m</code> or <code>!stop 15</code></td>
+<td>executes a server <em>stop</em> 15 minutes from now</td>
+</tr>
+<tr>
+<td><code>#</code>h</td>
+<td><code>!start 5h</code></td>
+<td><em>starts</em> the server <strong>now</strong> and will <em>stop</em> the server 5 hours from now</td>
+</tr>
+<tr>
+<td><code>#</code>d</td>
+<td><code>!restart 2d</code></td>
+<td><em>restarts</em> a server 2 days from now</td>
+</tr>
+</tbody>
+</table>
+<h4 id="end-datetime-timers">End date/time timers</h4>
+<p>If you wish to configure an <code>action</code> to occur at a <strong>specific</strong> date/time use the following.</p>
+<h5 id="date-time">Date-time</h5>
+<table>
+<thead>
+<tr>
+<th>syntax</th>
+<th>example</th>
+<th>example behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>##</code>-<code>##</code>-<code>##</code>.<code>##</code>:<code>##</code></td>
+<td><code>2023-10-05.21:30</code></td>
+<td>executes <strong>action</strong> at the specified datetime 2023-10-05.21:30</td>
+</tr>
+<tr>
+<td><code>##</code>/<code>##</code>/<code>##</code>.<code>##</code>h<code>##</code></td>
+<td><code>2023/10/05.21h30</code></td>
+<td>executes <strong>action</strong> at the specified datetime 2023/10/05.21h30</td>
+</tr>
+</tbody>
+</table>
+<h5 id="time">Time</h5>
+<table>
+<thead>
+<tr>
+<th>syntax</th>
+<th>example</th>
+<th>example behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>##</code>:<code>##</code></td>
+<td><code>!stop 21:30</code></td>
+<td>executes a server <em>stop</em> at the specified time of 09:30<em>pm</em> today</td>
+</tr>
+<tr>
+<td><code>##</code>h<code>##</code></td>
+<td><code>!start 21h30</code></td>
+<td><em>starts</em> the server <strong>now</strong> and executes a server <em>stop</em> at the specified time of 09:30<em>pm</em> today</td>
 </tr>
 </tbody>
 </table>
