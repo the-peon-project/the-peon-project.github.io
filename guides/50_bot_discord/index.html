@@ -1061,6 +1061,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
       Commands
@@ -1470,6 +1479,34 @@
 
 
 <h1 id="botdiscord">Bot.Discord</h1>
+<h2 id="terms">Terms</h2>
+<p>The project uses arbitratry names for certain concepts. Please see below for details</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>War Party</td>
+<td>A host server where you game servers are deployed.</td>
+</tr>
+<tr>
+<td>War Camp</td>
+<td>A containerized game server.</td>
+</tr>
+<tr>
+<td>War Plan</td>
+<td>A recipe used to automatically deploy the containerized game server.</td>
+</tr>
+<tr>
+<td>Orc</td>
+<td>The management container that orchestrates all of the deployment and management of the game servers on a host (required on each host)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="commands">Commands</h2>
 <p>Below are the commands that can be run against the bot.</p>
 <table>
@@ -1499,12 +1536,12 @@
 <tr>
 <td><img alt="📜" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dc.svg" title=":scroll:" /></td>
 <td><code>!plan</code></td>
-<td>*get the required/optional settings for a game server.</td>
+<td>*get the required/optional settings to deploy a warcamp.</td>
 </tr>
 <tr>
 <td><img alt="📚" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" title=":books:" /></td>
 <td><code>!plans</code></td>
-<td>*list all the available game server options.</td>
+<td>*list all possible warcamps.</td>
 </tr>
 <tr>
 <td><img alt="🔧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f527.svg" title=":wrench:" /></td>
@@ -1514,7 +1551,7 @@
 <tr>
 <td><img alt="⚔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2694.svg" title=":crossed_swords:" /></td>
 <td><code>!import</code></td>
-<td>*to scan all Orchestrators and import all valid warcamps.</td>
+<td>*to scan all war parties and import all valid warcamps.</td>
 </tr>
 <tr>
 <td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></td>
@@ -1549,7 +1586,7 @@
 <tr>
 <td><img alt="💬" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4ac.svg" title=":speech_balloon:" /></td>
 <td><code>!about</code></td>
-<td>Print information about the project, as well as current software versions of the orchestration tools.</td>
+<td>to print information about the project, as well as current software versions of the orchestration tools.</td>
 </tr>
 </tbody>
 </table>
