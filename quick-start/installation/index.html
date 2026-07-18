@@ -1267,18 +1267,30 @@ PEON_CACHE_ENABLED=true
 PEON_CACHE_URL=http://host.docker.internal:3128
 PEON_CACHE_BYPASS=localhost,127.0.0.1,host.docker.internal,peon.orc,peon.webui,peon.db
 
+# Optional HTTPS reverse proxy (Caddy + Let&#39;s Encrypt)
+PEON_PROXY_ENABLED=false
+PEON_PROXY_DOMAIN=server.example.com
+PEON_PROXY_EMAIL=ops@example.com
+PEON_WEBUI_HOST_PORT=80
+
 # Discord Bot Configuration
 DISCORD_TOKEN=your_discord_bot_token_here
 </code></pre></div>
 <h3 id="3-start-peon-services">3. Start PEON Services</h3>
 <div class="highlight"><pre><span></span><code>./deploy_peon.sh
 </code></pre></div>
+<p>To run non-interactively with HTTPS reverse proxy enabled:</p>
+<div class="highlight"><pre><span></span><code>./deploy_peon.sh<span class="w"> </span>--orchestrator<span class="w"> </span>--webui<span class="w"> </span>--proxy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--proxy-domain<span class="w"> </span>server.example.com<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--proxy-email<span class="w"> </span>ops@example.com
+</code></pre></div>
 <p>This will start:</p>
 <ul>
 <li><strong>Orchestrator</strong>: Core API service (port 5000)</li>
 <li><strong>Cache Proxy</strong>: Shared HTTP cache for SteamCMD and other proxy-aware downloads (port 3128, when enabled)</li>
 <li><strong>Discord Bot</strong>: Slash command interface</li>
-<li><strong>Web UI</strong>: Browser interface (port 80)</li>
+<li><strong>Web UI</strong>: Browser interface (port 80 by default, port 8080 when reverse proxy is enabled)</li>
+<li><strong>Reverse Proxy</strong>: Caddy with automatic Let's Encrypt certificates (ports 80/443, when enabled)</li>
 </ul>
 <p>When the cache proxy is enabled, newly generated game server manifests receive standard proxy environment variables and a <code>host.docker.internal</code> host-gateway alias. Downloads that honor <code>HTTP_PROXY</code> or <code>HTTPS_PROXY</code> will reuse cached content locally instead of fetching every update from the internet again.</p>
 <h3 id="4-verify-installation">4. Verify Installation</h3>
