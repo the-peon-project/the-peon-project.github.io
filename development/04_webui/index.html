@@ -1046,6 +1046,8 @@
       
         
       
+        
+      
     
     
     
@@ -1262,6 +1264,34 @@
     
   
     Enshrouded
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../games/windrose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windrose
   
 
     
@@ -1760,10 +1790,11 @@
 <p>Theme controls are admin-only and live in the Admin panel.</p>
 <p>Theme modes:</p>
 <ul>
-<li><code>clean</code>: flat slate and light-blue UI with minimal gradients.</li>
+<li><code>default</code>: flat slate and light-blue UI with minimal gradients.</li>
 <li><code>horde</code>: a classic warcamp look with iron, bone, leather, and battle-green accents.</li>
 <li><code>alliance</code>: a human castle look with stone, steel, royal blue, and gold accents.</li>
 </ul>
+<p>Server detail reads now open inside dedicated dashboard modals instead of expanding additional inline detail blocks on the server management page.</p>
 <p>Future UI elements should follow the shared brand rules in the WebUI README before introducing new styling patterns.</p>
 <p>Game logos are now served through a backend resolver at <code>/game-logos/&lt;game_uid&gt;.&lt;ext&gt;</code>.
 When a plan list is fetched or a server is deployed from a recipe, WebUI will automatically hydrate and cache missing logos (including formats like <code>logo.webp</code> from <code>peon-warplans</code>).</p>
@@ -1805,6 +1836,14 @@ When a plan list is fetched or a server is deployed from a recipe, WebUI will au
 </ul>
 <hr />
 <h2 id="release-notes">Release Notes</h2>
+<p><strong>0.1.10</strong></p>
+<ul>
+<li>Fixed shared WebUI modal backdrops so server console and related dialogs open as viewport overlays instead of rendering inline below the server list.</li>
+<li>Fixed WebUI server action proxy calls so start, stop, restart, update, and delete requests use the resolved orchestrator URL candidates and the correct delete API semantics.</li>
+<li>Moved GET-driven live server stats into the info modal to keep the main server management grid compact.</li>
+<li>Renamed the <code>clean</code> theme to <code>default</code>, with legacy browser-stored preferences still migrating automatically.</li>
+<li>Corrected dark-mode heading contrast and aligned Horde and Alliance light-mode surfaces with the default theme's background switching.</li>
+</ul>
 <p><strong>0.1.9</strong></p>
 <ul>
 <li>Added backend-driven game logo resolution and caching for <code>/game-logos/*</code> requests.</li>

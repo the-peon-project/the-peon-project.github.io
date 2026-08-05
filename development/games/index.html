@@ -912,6 +912,8 @@
       
         
       
+        
+      
     
     
     
@@ -1126,6 +1128,34 @@
     
   
     Enshrouded
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./windrose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windrose
   
 
     
@@ -1625,6 +1655,13 @@
 <blockquote>
 <p><em>Don't be afraid to discard excellent code, just because its excellent. Good code can always find another home. A poor use of good code is a poor use of time.</em></p>
 </blockquote>
+<h3 id="untested-rollout-status">Untested rollout status</h3>
+<p>The game catalog now uses explicit rollout stages (<code>working</code>, <code>untested</code>, <code>planned</code>).</p>
+<ul>
+<li>Product-facing list: <a href="../../games/">Supported Games</a></li>
+<li>Engineering expectation: each <code>untested</code> title needs dedicated-server app-id verification, startup command validation, and game-specific port/storage hardening before promotion to <code>working</code>.</li>
+<li>Product docs intentionally list only self-hostable servers.</li>
+</ul>
 <h3 id="directory-structure">Directory Structure</h3>
 <div class="highlight"><pre><span></span><code>./data/<span class="w">             </span><span class="c1"># DIR: This is where the game server binaries/files are stored</span>
 ./peon/<span class="w">             </span><span class="c1"># DIR: This is for PEON status information files</span>
