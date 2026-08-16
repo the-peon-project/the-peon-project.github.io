@@ -1794,7 +1794,20 @@
 <li><code>horde</code>: a classic warcamp look with iron, bone, leather, and battle-green accents.</li>
 <li><code>alliance</code>: a human castle look with stone, steel, royal blue, and gold accents.</li>
 </ul>
+<p>Login is now always rendered in dark mode so the sign-in experience stays consistent regardless of each admin's saved dashboard theme preference.</p>
 <p>Server detail reads now open inside dedicated dashboard modals instead of expanding additional inline detail blocks on the server management page.</p>
+<p>Server management now adds two navigation improvements:</p>
+<ul>
+<li>A compact running-server quick list at the top of each orchestrator section, with click-to-jump navigation to each running server card/row.</li>
+<li>Server cards/rows grouped by <code>game_uid</code> in alphabetical order while preserving existing card/list presentation and lifecycle controls.</li>
+<li>Within each game group, running servers are listed first, then the remaining servers in alphabetical order.</li>
+<li>Grouped server cards use a standardized height so grid rows align cleanly.</li>
+<li>Grouped server cards now use a fixed grid footprint, so card size stays consistent even when one game group has fewer cards than another.</li>
+<li>Deploy modal plan settings now render through a dynamic configuration form that safely handles mixed plan schemas and pre-fills defaults before deployment.</li>
+<li>Deploy configuration fields now support scalar plan values and object-based field metadata, including boolean toggles, select options, textareas, and required-field validation before submission.</li>
+<li>Deploy plan selection is now searchable by game name/UID and auto-collapses after selecting a plan, with an explicit "Change Plan" control to reopen the catalog.</li>
+<li>Plan cards now prefer human-readable recipe names (from recipe README titles), while still showing <code>game_uid</code> as secondary context.</li>
+</ul>
 <p>Future UI elements should follow the shared brand rules in the WebUI README before introducing new styling patterns.</p>
 <p>Game logos are now served through a backend resolver at <code>/game-logos/&lt;game_uid&gt;.&lt;ext&gt;</code>.
 When a plan list is fetched or a server is deployed from a recipe, WebUI will automatically hydrate and cache missing logos (including formats like <code>logo.webp</code> from <code>peon-warplans</code>).</p>
@@ -1836,6 +1849,15 @@ When a plan list is fetched or a server is deployed from a recipe, WebUI will au
 </ul>
 <hr />
 <h2 id="release-notes">Release Notes</h2>
+<p><strong>0.1.11</strong></p>
+<ul>
+<li>Added a schema-tolerant deploy form generator for game plans, so selecting a plan no longer fails when <code>environment</code> entries are null/scalar values.</li>
+<li>Added deploy-form default hydration and required-field validation for dynamic plan settings.</li>
+<li>Added support for typed deploy controls (boolean, select, textarea, number/password/text) when plan metadata provides field hints.</li>
+<li>Added searchable deploy plan selection with collapse-on-select behavior in the deploy modal.</li>
+<li>Fixed deploy modal orchestrator preselection so Deploy always remains actionable when orchestrators are present.</li>
+<li>Added PNG-first logo hydration for recipe catalogs, with fallback to other available formats and default branding when game-specific logos are missing.</li>
+</ul>
 <p><strong>0.1.10</strong></p>
 <ul>
 <li>Fixed shared WebUI modal backdrops so server console and related dialogs open as viewport overlays instead of rendering inline below the server list.</li>
@@ -1843,6 +1865,10 @@ When a plan list is fetched or a server is deployed from a recipe, WebUI will au
 <li>Moved GET-driven live server stats into the info modal to keep the main server management grid compact.</li>
 <li>Renamed the <code>clean</code> theme to <code>default</code>, with legacy browser-stored preferences still migrating automatically.</li>
 <li>Corrected dark-mode heading contrast and aligned Horde and Alliance light-mode surfaces with the default theme's background switching.</li>
+<li>Added running-server quick-jump links at the top of each orchestrator server section.</li>
+<li>Grouped server cards/list rows by game in alphabetical order.</li>
+<li>Forced the login screen to always use dark mode.</li>
+<li>Hardened deploy plan selection so environment fields with null/scalar defaults no longer crash the UI, and deploy forms now auto-populate plan defaults.</li>
 </ul>
 <p><strong>0.1.9</strong></p>
 <ul>
